@@ -1,9 +1,12 @@
 import Layout from "./components/shared/Layout";
+import Home from "./pages/HomeP";
 
 function App() {
   return (
-    <div className="bg-red-400">
-      <Layout></Layout>
+    <div className="">
+      <Layout>
+        <Home />
+      </Layout>
     </div>
   );
 }
