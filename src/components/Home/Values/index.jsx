@@ -60,7 +60,8 @@ const Values = () => {
       {/* image */}
       <div className="flex-1 relative p-4">
         <div
-          className="flex-1 bg-secondary absolute top-5 left-9 h-[90%] w-[90%] xs:h-[95%] xs:w-[95%] -z-10
+          className="flex-1 bg-secondary absolute top-5 left-9 
+          h-[90%] w-[90%] xs:h-[95%] xs:w-[95%] -z-10
         "
         ></div>
 

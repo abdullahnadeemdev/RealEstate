@@ -4,14 +4,13 @@ import { TickBox } from "../../../assets/icons";
 
 const WhyUs = () => {
   return (
-    <div className="flex justify-between px-6 md:px-15 py-20 gap-6">
-      <div className="flex-1 relative mr-10 h-[74vh]">
-        <div className="absolute -z-10 h-[74vh] w-[99%] bg-secondary -right-5">
-          ghy
-        </div>
-        <img src={homeInterior} alt="" />
+    <div className="flex flex-col md:flex-row justify-between px-6 md:px-15 py-20 gap-6">
+      <div className="flex-1 relative mr-10 ">
+        <div className="absolute h-[104%] -z-10 lg:h-[82vh] xl:h-[79vh] w-[99%] bg-secondary -right-5"></div>
+        <img src={homeInterior} alt="" className="object-cover w-full h-full" />
       </div>
-      <div className="flex-1">
+
+      <div className="flex-1 text-center md:text-start">
         <p className="font-semibold text-secondary">-Why choose us?</p>
         <p className="text-4xl font-semibold text-text-prim my-3">
           Why Choose Mian & Sons Construction
@@ -23,22 +22,25 @@ const WhyUs = () => {
           completed on time, on budget and exceeds expectations.s
         </p>
 
-        <span className="flex text-greyLight mb-3">
-          <TickBox />
-          <p>High quality workmanship</p>
-        </span>
-        <span className="flex text-greyLight mb-3">
-          <TickBox />
-          <p>Customer-focused approach</p>
-        </span>
-        <span className="flex text-greyLight mb-3">
-          <TickBox />
-          <p>Fair and transparent pricing</p>
-        </span>
-        <span className="flex text-greyLight mb-3">
-          <TickBox />
-          <p>Trusted local reputation</p>
-        </span>
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-1">
+          {" "}
+          <span className="flex text-greyLight mb-3">
+            <TickBox />
+            <p>High quality workmanship</p>
+          </span>
+          <span className="flex text-greyLight mb-3">
+            <TickBox />
+            <p>Customer-focused approach</p>
+          </span>
+          <span className="flex text-greyLight mb-3">
+            <TickBox />
+            <p>Fair and transparent pricing</p>
+          </span>
+          <span className="flex text-greyLight mb-3">
+            <TickBox />
+            <p>Trusted local reputation</p>
+          </span>
+        </div>
 
         <Button>Get Started</Button>
       </div>
