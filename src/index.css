@@ -13,6 +13,8 @@
   --color-border-clr: #f49e4c;
   --color-text-prim: #000000;
   --color-text-hover: #E4FFE1;
+  --color-textLight: #ffffff;
+
 
   --breakpoint-2xs: 320px;
   --breakpoint-xs: 425px;
@@ -35,5 +37,6 @@
     --color-border-clr: #fbbf24;
     --color-text-prim: #f8fafc;
     --color-text-hover: #ffffff;
+     --color-textLight: #000000;
   }
 }
