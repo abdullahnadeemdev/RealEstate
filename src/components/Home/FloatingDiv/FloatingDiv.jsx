@@ -6,7 +6,7 @@ const FloatingDiv = () => {
     <div className="absolute z-10 -bottom-90 md:-bottom-50 mx-6 lg:px-0 lg:mx-auto  text-white md:h-60 flex flex-col md:flex-row lg:w-[85vw] 2xl:w-[90vw] max-w-300 left-0 right-0 rounded-lg shadow-2xl ">
       {" "}
       <div className="bg-text-prim p-6 flex-1 flex flex-col justify-around rounded-lg md:rounded-r-none ">
-        <p className=" text-xl md:text-2xl text-main font-semibold ">
+        <p className=" text-xl md:text-2xl text-secondary font-semibold ">
           Book an apointment
         </p>
 

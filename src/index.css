@@ -7,8 +7,9 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-lato: "Lato", sans-serif;
 
-  --color-main: #2d728f;
-  --color-secondary: #3b8ea5;
+  --color-main: #000;
+  --color-secondary: #0072BC;
+  --color-light:#00AEEF;
   --color-text-prim: #181818;
   --color-text-hover: #E4FFE1;
   --color-textLight: #ffffff;
@@ -31,7 +32,7 @@
   }
   .dark {
     --color-main: #0f172a;
-    --color-secondary: #5fb3c9;
+    --color-light: #5fb3c9;
     --color-btn-clr: #f5ee9e;
     --color-border-clr: #fbbf24;
     --color-text-prim: #f8fafc;

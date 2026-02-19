@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { MenuIcon } from "../../../assets/icons";
+import { Logo } from "../../../assets/images";
 
 const Navbar = () => {
   const [isDark, setIsDark] = useState(false);
@@ -17,8 +18,13 @@ const Navbar = () => {
   return (
     <nav className="relative bg-main text-textLight p-4 flex justify-between font-lato">
       {/* main menu */}
-      <div className=" justify-between w-full font-semibold hidden sm:flex">
-        <p>I am logo</p>
+      <div className=" justify-between items-center w-full font-semibold hidden sm:flex">
+        <div className="flex items-center ">
+          <span className="w-[8vw]">
+            <img src={Logo} alt="Logo" />
+          </span>
+          <h3 className="font-bold  md:text-xl lg:text-2xl">Mian & Sons</h3>
+        </div>
         <ul className="flex gap-4 text-textLight ">
           {navList.map((item) => {
             return (

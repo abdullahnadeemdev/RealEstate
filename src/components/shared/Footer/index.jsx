@@ -1,12 +1,14 @@
-import React from "react";
+import { Logo } from "../../../assets/images";
 
 const Footer = () => {
   return (
-    <div className="max-w-360 mx-auto bg-secondary">
+    <div className="max-w-360 mx-auto bg-light">
       <div className="flex items-center justify-between w-full py-5 px-5">
         {/* <Link to="/"> */}
         <div className="flex items-center gap-2 ">
-          {/* <span className="w-[4vw]"><Logo /></span> */}
+          <span className="w-[8vw]">
+            <img src={Logo} alt="Logo" />
+          </span>
           <h3 className="font-bold  md:text-xl lg:text-2xl">Mian & Sons</h3>
         </div>
         {/* </Link> */}
@@ -25,7 +27,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-main font-light flex justify-between items-center py-2 text-sm px-2 xs:px-5 w-full">
+      <div className="bg-secondary font-light flex justify-between items-center py-2 text-sm px-2 xs:px-5 w-full">
         <div className="flex flex-col sm:flex-row gap-4 ">
           <p>Terms and conditions</p>
           <p>Privacy policy</p>

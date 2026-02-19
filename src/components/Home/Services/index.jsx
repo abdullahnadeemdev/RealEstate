@@ -54,7 +54,7 @@ const Services = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10 pb-20">
           {array.map((item) => {
             return (
-              <div className="flex flex-col bg-secondary w-fit rounded-xl gap-2 text-textLight  shadow-sm">
+              <div className="flex flex-col bg-light w-fit rounded-xl gap-2 text-textLight  shadow-sm">
                 <div className="flex-1 max-w-110">
                   <img
                     src={item.img}
