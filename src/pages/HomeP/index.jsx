@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../../components/Home/Hero";
 import FloatingDiv from "../../components/Home/FloatingDiv/FloatingDiv";
 import Values from "../../components/Home/Values";
+import Services from "../../components/Home/Services";
 
 const index = () => {
   return (
@@ -9,6 +10,7 @@ const index = () => {
       <Hero />
       <FloatingDiv />
       <Values />
+      <Services />
     </div>
   );
 };
