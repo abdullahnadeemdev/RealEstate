@@ -15,14 +15,14 @@ const Navbar = () => {
   }, [isDark]);
 
   return (
-    <nav className="relative bg-main text-text-prim p-4 flex justify-between font-lato">
+    <nav className="relative bg-main text-textLight p-4 flex justify-between font-lato">
       {/* main menu */}
       <div className=" justify-between w-full font-semibold hidden sm:flex">
         <p>I am logo</p>
-        <ul className="flex gap-4 text-text-prim ">
+        <ul className="flex gap-4 text-textLight ">
           {navList.map((item) => {
             return (
-              <li className="hover:text-text-hover duration-300 cursor-pointer">
+              <li className="hover:text-text-prim duration-300 cursor-pointer">
                 {item}
               </li>
             );
@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="flex  sm:hidden justify-between w-full">
         <MenuIcon onClick={() => setIsHamMenu((prev) => !prev)} />
         {ishamMenu && (
-          <ul className="absolute bg-main text-text-prim left-0 top-14 w-[90vw] ">
+          <ul className="absolute bg-main text-textLight left-0 top-14 w-[90vw] ">
             {navList.map((item) => {
               return (
                 <li className="hover:text-text-hover duration-300 cursor-pointer p-1 border-text-prim  border-t">
