@@ -37,7 +37,7 @@ const array = [
 
 const Services = () => {
   return (
-    <div className="bg-greyLight/10 mt-10 px-6 md:px-15">
+    <div className="bg-greyLight/10 mt-20 px-6 md:px-15">
       <div className="pt-15 text-center">
         <p className="font-semibold text-main text-sm md:text-base">
           - Construction Services
@@ -51,7 +51,7 @@ const Services = () => {
         </p>
 
         {/* card */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10 pb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10 pb-20">
           {array.map((item) => {
             return (
               <div className="flex flex-col bg-secondary w-fit rounded-xl gap-2 text-textLight  shadow-sm">
