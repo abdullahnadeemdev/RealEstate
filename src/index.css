@@ -11,9 +11,10 @@
   --color-secondary: #3b8ea5;
   --color-btn-clr: #f5ee9e;
   --color-border-clr: #f49e4c;
-  --color-text-prim: #000000;
+  --color-text-prim: #181818;
   --color-text-hover: #E4FFE1;
   --color-textLight: #ffffff;
+  --color-greyLight:#8D91AE;
 
 
   --breakpoint-2xs: 320px;
@@ -38,5 +39,6 @@
     --color-text-prim: #f8fafc;
     --color-text-hover: #ffffff;
      --color-textLight: #000000;
+     --color-greyLight:#000000
   }
 }
