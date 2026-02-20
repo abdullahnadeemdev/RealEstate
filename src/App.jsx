@@ -1,13 +1,13 @@
 import Layout from "./components/shared/Layout";
 import Home from "./pages/HomeP";
+import About from "./pages/AboutP";
 
 function App() {
   return (
     <div className="font-lato">
       <Layout>
-        <div className="mx-auto">
-          <Home />
-        </div>
+        {/* <Home /> */}
+        <About />
       </Layout>
     </div>
   );
