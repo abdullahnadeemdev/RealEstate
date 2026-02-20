@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav className="relative bg-main text-textLight p-4 flex justify-between font-lato z-100">
       {/* main menu */}
-      <div className=" justify-between items-center w-full font-semibold hidden sm:flex">
+      <div className=" justify-between items-center w-full font-semibold hidden sm:flex max-w-360 mx-auto">
         <div className="flex items-center ">
           <span className="w-[8vw]">
             <img src={Logo} alt="Logo" />

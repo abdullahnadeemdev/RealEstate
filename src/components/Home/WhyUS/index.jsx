@@ -4,9 +4,9 @@ import { TickBox } from "../../../assets/icons";
 
 const WhyUs = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between px-6 md:px-15  py-20 gap-6">
+    <div className="flex flex-col md:flex-row justify-between px-6 md:px-15 max-w-360 mx-auto py-20 gap-6">
       <div className="flex-1 relative mr-10 ">
-        <div className="absolute h-[104%] -z-10 lg:h-[82vh] xl:h-[79vh] w-[99%] bg-light -right-5 max-h-119.75"></div>
+        <div className="absolute h-[104%] -z-10 lg:h-[82vh] xl:h-[72vh] w-[99%] bg-light -right-5 max-h-112"></div>
         <img src={homeInterior} alt="" className="object-cover w-full h-full" />
       </div>
 

@@ -10,7 +10,7 @@ const Hero = () => {
         className="absolute inset-0 h-full w-full object-cover z-0 opacity-70"
       />
 
-      <div className="relative z-10 h-full max-w-360 mx-auto flex items-center px-6 md:px-15 text-center md:text-start">
+      <div className="relative z-10  h-full max-w-360 mx-auto flex items-center px-6 md:px-15 text-center md:text-start">
         <div className="max-w-150 text-white">
           <h1 className="text-2xl lg:text-4xl xl:text-5xl font-semibold leading-tight">
             Building Residential homes, <br />

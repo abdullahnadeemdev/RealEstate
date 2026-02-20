@@ -5,7 +5,9 @@ function App() {
   return (
     <div className="font-lato">
       <Layout>
-        <Home />
+        <div className="mx-auto">
+          <Home />
+        </div>
       </Layout>
     </div>
   );

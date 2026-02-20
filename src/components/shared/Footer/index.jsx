@@ -5,8 +5,8 @@ import { FacebookIcon } from "../../../assets/icons";
 
 const Footer = () => {
   return (
-    <div className="max-w-360 mx-auto bg-main text-textLight">
-      <div className="flex items-center justify-between w-full py-5 px-5">
+    <div className=" bg-main text-textLight">
+      <div className="flex items-center justify-between w-full py-5 px-5 max-w-360 mx-auto">
         {/* <Link to="/"> */}
         <div className="flex items-center gap-2 ">
           <span className="w-[8vw]">
@@ -30,14 +30,17 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-greyLight font-light flex justify-between items-center py-2 text-sm px-2 xs:px-5 w-full">
-        <div className="flex flex-col sm:flex-row gap-4 ">
-          <p>Terms and conditions</p>
-          <p>Privacy policy</p>
-        </div>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <p>+44 1332 412251</p>
-          <p>support@bbookshelf.com</p>
+      <div className="bg-greyLight ">
+        <div className="max-w-360 mx-auto font-light flex justify-between items-center py-2 text-sm px-2 xs:px-5 w-full">
+          {" "}
+          <div className="flex flex-col sm:flex-row gap-4 ">
+            <p>Terms and conditions</p>
+            <p>Privacy policy</p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <p>+44 1332 412251</p>
+            <p>support@bbookshelf.com</p>
+          </div>
         </div>
       </div>
     </div>

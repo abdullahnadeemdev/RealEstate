@@ -8,7 +8,7 @@ import WhyUs from "../../components/Home/WhyUS";
 
 const index = () => {
   return (
-    <div className="max-w-360!">
+    <div className="">
       <Hero />
       <FloatingDiv />
       <Values />
