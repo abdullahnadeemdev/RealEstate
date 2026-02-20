@@ -39,7 +39,7 @@ const Services = () => {
   return (
     <div className="bg-greyLight/10 mt-20 px-6 md:px-15">
       <div className="pt-15 text-center">
-        <p className="font-semibold text-main text-sm md:text-base">
+        <p className="font-semibold text-secondary text-sm md:text-base">
           - Construction Services
         </p>
         <p className="font-semibold text-xl md:text-2xl lg:text-4xl my-3">

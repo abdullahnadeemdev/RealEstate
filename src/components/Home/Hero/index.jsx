@@ -21,7 +21,7 @@ const Hero = () => {
             with a commitment to excellence and client satisfaction.
           </p>
           <div className="mt-5 flex gap-4 justify-center md:justify-start">
-            <Button>Our Services</Button>
+            <Button className={"bg-secondary"}>Our Services</Button>
             <Button variant="outlined">Contact Us</Button>
           </div>
         </div>

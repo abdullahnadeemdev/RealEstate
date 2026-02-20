@@ -1,8 +1,11 @@
 import { Logo } from "../../../assets/images";
+import { TwitterIcon } from "../../../assets/icons";
+import { InstagramIcon } from "../../../assets/icons";
+import { FacebookIcon } from "../../../assets/icons";
 
 const Footer = () => {
   return (
-    <div className="max-w-360 mx-auto bg-light">
+    <div className="max-w-360 mx-auto bg-main text-textLight">
       <div className="flex items-center justify-between w-full py-5 px-5">
         {/* <Link to="/"> */}
         <div className="flex items-center gap-2 ">
@@ -14,20 +17,20 @@ const Footer = () => {
         {/* </Link> */}
         <div className="flex items-center gap-4">
           {/* <Link to="https://www.instagram.com/"> */}
-          {/* <InstagramIcon /> */}
+          <InstagramIcon />
           {/* </Link> */}
 
           {/* <Link to="https://www.facebook.com/"> */}
-          {/* <FacebookIcon /> */}
+          <FacebookIcon />
           {/* </Link> */}
 
           {/* <Link to="https://x.com/"> */}
-          {/* <TwitterIcon /> */}
+          <TwitterIcon />
           {/* </Link> */}
         </div>
       </div>
 
-      <div className="bg-secondary font-light flex justify-between items-center py-2 text-sm px-2 xs:px-5 w-full">
+      <div className="bg-greyLight font-light flex justify-between items-center py-2 text-sm px-2 xs:px-5 w-full">
         <div className="flex flex-col sm:flex-row gap-4 ">
           <p>Terms and conditions</p>
           <p>Privacy policy</p>

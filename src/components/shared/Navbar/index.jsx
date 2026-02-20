@@ -16,7 +16,7 @@ const Navbar = () => {
   }, [isDark]);
 
   return (
-    <nav className="relative bg-main text-textLight p-4 flex justify-between font-lato">
+    <nav className="relative bg-main text-textLight p-4 flex justify-between font-lato z-100">
       {/* main menu */}
       <div className=" justify-between items-center w-full font-semibold hidden sm:flex">
         <div className="flex items-center ">
@@ -28,7 +28,7 @@ const Navbar = () => {
         <ul className="flex gap-4 text-textLight ">
           {navList.map((item) => {
             return (
-              <li className="hover:text-text-prim duration-300 cursor-pointer">
+              <li className="hover:text-secondary duration-300 cursor-pointer">
                 {item}
               </li>
             );
@@ -37,20 +37,22 @@ const Navbar = () => {
       </div>
 
       {/* phone menu */}
-      <div className="flex  sm:hidden justify-between w-full">
+      <div className="relative z-100 flex sm:hidden justify-between w-full items-center">
         <MenuIcon onClick={() => setIsHamMenu((prev) => !prev)} />
         {ishamMenu && (
-          <ul className="absolute bg-main text-textLight left-0 top-14 w-[90vw] ">
+          <ul className="absolute bg-main text-textLight left-0 top-11 w-[90vw] ">
             {navList.map((item) => {
               return (
-                <li className="hover:text-text-hover duration-300 cursor-pointer p-1 border-text-prim  border-t">
+                <li className="hover:text-secondary duration-300 cursor-pointer p-1 border-text-prim  border-t">
                   {item}
                 </li>
               );
             })}
           </ul>
         )}
-        <p>I am logo</p>
+        <span className="w-[20vw]">
+          <img src={Logo} alt="Logo" />
+        </span>
       </div>
     </nav>
   );

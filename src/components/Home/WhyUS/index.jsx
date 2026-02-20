@@ -11,7 +11,7 @@ const WhyUs = () => {
       </div>
 
       <div className="flex-1 text-center md:text-start">
-        <p className="font-semibold text-light">-Why choose us?</p>
+        <p className="font-semibold text-secondary">-Why choose us?</p>
         <p className="text-4xl font-semibold text-text-prim my-3">
           Why Choose Mian & Sons Construction
         </p>

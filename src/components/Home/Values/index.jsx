@@ -6,7 +6,7 @@ const Values = () => {
   return (
     <div className="mt-100 md:mt-75 px-6 md:px-15 xl:px-15  flex flex-col-reverse md:flex-row justify-between gap-10">
       <div className="flex-1 text-center md:text-start">
-        <p className="font-semibold text-main text-xs md:text-sm">
+        <p className="font-semibold text-secondary text-xs md:text-sm">
           - WHO ARE WE
         </p>
         <p className="font-semibold text-xl md:text-2xl lg:text-4xl my-3">
