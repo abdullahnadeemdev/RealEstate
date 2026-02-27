@@ -1,63 +1,172 @@
-import React from "react";
-import Button from "../../shared/Button";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const FloatingDiv = () => {
+  const [appointmentForm, setAppointmentForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+  });
+  const [emailForm, setEmailForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+
+  const handleAppointmentSubmit = (e) => {
+    e.preventDefault();
+    console.log("Book an Appointment:", appointmentForm);
+    setAppointmentForm({ name: "", email: "", phone: "", service: "" });
+  };
+
+  const handleEmailSubmit = (e) => {
+    e.preventDefault();
+    console.log("Email Info:", emailForm);
+    setEmailForm({ name: "", email: "", phone: "" });
+  };
+
+  const inputClass =
+    "w-full border border-gray-200 rounded-lg px-3 py-2 text-sm text-text-prim focus:outline-none focus:ring-2 focus:ring-secondary/40 transition";
+
   return (
-    <div className="absolute z-10 -bottom-90 md:-bottom-50 mx-6 lg:px-0 lg:mx-auto  text-white md:h-60 flex flex-col md:flex-row lg:w-[85vw] 2xl:w-[90vw] max-w-300 left-0 right-0 rounded-lg shadow-2xl ">
-      {" "}
-      <div className="bg-text-prim p-6 flex-1 flex flex-col justify-around rounded-lg md:rounded-r-none ">
-        <p className=" text-xl md:text-2xl text-secondary font-semibold ">
-          Book an apointment
+    <motion.div
+      className="relative z-10 mx-4 md:mx-auto max-w-5xl -mt-16 rounded-2xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
+      {/* Left — Book Appointment */}
+      <div className="bg-darkBg p-8 text-textLight flex flex-col">
+        <p className="text-secondary font-semibold text-xs uppercase tracking-widest mb-1">
+          Get Started
         </p>
-
-        <p className="my-7 text-xs md:text-base">
-          Reach out to us today to discuss how we can turn your vision into
-          reality.
+        <h3 className="text-2xl font-bold mb-2">Book an Appointment</h3>
+        <p className="text-textLight/60 text-sm mb-6">
+          Reach out to discuss how we can turn your vision into reality.
         </p>
-
-        <span className="text-xs md:text-sm lg:text-base text-textLight font-semibold flex flex-col md:flex-row text-center md:text-start">
-          <p className="mr-6 text-nowrap">0300-8432834</p>
-          <p className="ml-0 sm:ml-6 ">info@adcoconstruction.co.uk</p>
-        </span>
-      </div>
-      <div className="bg-white p-6 text-text-prim flex-1 rounded-lg md:rounded-l-none ">
-        <div className="flex items-center justify-between  max-h-8 mt-0.5">
-          <p className=" text-xl md:text-2xl text-main font-semibold ">
-            Email Info
-          </p>
-
-          <Button className="text-xs! -translate-y-2.5">Submit</Button>
-        </div>
-
-        <span className="flex flex-col mt-4 text-xs md:text-sm">
-          <label>Enter Full Name:</label>
+        <form onSubmit={handleAppointmentSubmit} className="flex flex-col gap-4 flex-1">
           <input
             type="text"
-            placeholder="Name"
-            className="border p-1 rounded-lg w-full"
+            placeholder="Full Name"
+            value={appointmentForm.name}
+            onChange={(e) =>
+              setAppointmentForm((p) => ({ ...p, name: e.target.value }))
+            }
+            className="bg-white/10 border border-white/15 text-textLight placeholder-textLight/40 text-sm rounded-lg px-3 py-2.5 focus:outline-none focus:border-secondary"
+            required
           />
-        </span>
+          <input
+            type="email"
+            placeholder="Email Address"
+            value={appointmentForm.email}
+            onChange={(e) =>
+              setAppointmentForm((p) => ({ ...p, email: e.target.value }))
+            }
+            className="bg-white/10 border border-white/15 text-textLight placeholder-textLight/40 text-sm rounded-lg px-3 py-2.5 focus:outline-none focus:border-secondary"
+            required
+          />
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            value={appointmentForm.phone}
+            onChange={(e) =>
+              setAppointmentForm((p) => ({ ...p, phone: e.target.value }))
+            }
+            className="bg-white/10 border border-white/15 text-textLight placeholder-textLight/40 text-sm rounded-lg px-3 py-2.5 focus:outline-none focus:border-secondary"
+          />
+          <select
+            value={appointmentForm.service}
+            onChange={(e) =>
+              setAppointmentForm((p) => ({ ...p, service: e.target.value }))
+            }
+            className="bg-white/10 border border-white/15 text-textLight/70 text-sm rounded-lg px-3 py-2.5 focus:outline-none focus:border-secondary"
+          >
+            <option value="">Select Service</option>
+            <option>New Builds</option>
+            <option>Commercial Fit Out</option>
+            <option>Project Management</option>
+            <option>Renovations</option>
+            <option>Extensions</option>
+            <option>Maintenance</option>
+          </select>
+          <button
+            type="submit"
+            className="mt-auto bg-secondary hover:bg-main text-textLight font-semibold py-3 rounded-lg transition-colors duration-300 text-sm"
+          >
+            Book Appointment
+          </button>
+        </form>
+        <div className="mt-5 pt-5 border-t border-white/10 text-textLight/50 text-xs flex gap-6">
+          <span>📞 0300-8432834</span>
+          <span>✉ info@miansons.co.uk</span>
+        </div>
+      </div>
 
-        <span className="grid grid-cols-2 gap-6 w-full text-xs md:text-sm mt-4">
-          <span className="flex flex-col mt-2">
-            <label>Email Address:</label>
-            <input
-              type="email"
-              placeholder="Email"
-              className="border p-2 rounded-lg w-full"
-            />
-          </span>
-          <span className="flex flex-col mt-2">
-            <label>Phone Number:</label>
+      {/* Right — Email Info */}
+      <div className="bg-white p-8 flex flex-col">
+        <p className="text-secondary font-semibold text-xs uppercase tracking-widest mb-1">
+          Quick Enquiry
+        </p>
+        <h3 className="text-2xl font-bold text-text-prim mb-2">Email Info</h3>
+        <p className="text-greyLight text-sm mb-6">
+          Share your details and we'll get back to you within 24 hours.
+        </p>
+        <form onSubmit={handleEmailSubmit} className="flex flex-col gap-4 flex-1">
+          <div>
+            <label className="block text-xs font-semibold text-greyLight mb-1.5">
+              Full Name
+            </label>
             <input
               type="text"
-              placeholder="PhoneNumber"
-              className="border p-2 rounded-lg w-full "
+              placeholder="John Smith"
+              value={emailForm.name}
+              onChange={(e) =>
+                setEmailForm((p) => ({ ...p, name: e.target.value }))
+              }
+              className={inputClass}
+              required
             />
-          </span>
-        </span>
+          </div>
+          <div>
+            <label className="block text-xs font-semibold text-greyLight mb-1.5">
+              Email Address
+            </label>
+            <input
+              type="email"
+              placeholder="john@example.com"
+              value={emailForm.email}
+              onChange={(e) =>
+                setEmailForm((p) => ({ ...p, email: e.target.value }))
+              }
+              className={inputClass}
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-semibold text-greyLight mb-1.5">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              placeholder="+44 1234 567890"
+              value={emailForm.phone}
+              onChange={(e) =>
+                setEmailForm((p) => ({ ...p, phone: e.target.value }))
+              }
+              className={inputClass}
+            />
+          </div>
+          <button
+            type="submit"
+            className="mt-auto bg-main hover:bg-secondary text-textLight font-semibold py-3 rounded-lg transition-colors duration-300 text-sm"
+          >
+            Send Enquiry
+          </button>
+        </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

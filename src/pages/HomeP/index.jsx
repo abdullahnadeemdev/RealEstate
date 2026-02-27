@@ -6,17 +6,19 @@ import Services from "../../components/Home/Services";
 import CTA from "../../components/Home/CTA";
 import WhyUs from "../../components/Home/WhyUS";
 
-const index = () => {
+const Home = () => {
   return (
-    <div className="">
+    <div className="overflow-x-hidden">
       <Hero />
-      <FloatingDiv />
+      <div className="pb-16">
+        <FloatingDiv />
+      </div>
       <Values />
       <Services />
-      <CTA />
       <WhyUs />
+      <CTA />
     </div>
   );
 };
 
-export default index;
+export default Home;

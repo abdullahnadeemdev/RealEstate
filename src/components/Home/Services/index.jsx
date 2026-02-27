@@ -51,23 +51,23 @@ const Services = () => {
         </p>
 
         {/* card */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10 pb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 pb-20">
           {array.map((item) => {
             return (
-              <div className="flex flex-col bg-light w-fit rounded-xl gap-2 text-textLight  shadow-sm">
-                <div className="flex-1 max-w-110">
+              <div key={item.title} className="flex flex-col bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                <div className="h-48 overflow-hidden">
                   <img
                     src={item.img}
-                    alt=""
-                    className="object-cover w-full h-full rounded-t-xl"
+                    alt={item.title}
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="flex-1 max-w-110 text-start p-2 flex flex-col">
-                  <p className="font-semibold text-sm xs:text-base md:text-lg">
+                <div className="flex-1 text-start p-5 flex flex-col">
+                  <p className="font-bold text-text-prim text-base md:text-lg mb-2">
                     {item.title}
                   </p>
-                  <p className=" text-xs md:text-sm my-2">{item.desc}</p>
-                  <Button className="self-center">Learn More</Button>
+                  <p className="text-greyLight text-xs md:text-sm leading-relaxed flex-1">{item.desc}</p>
+                  <Button className="self-start mt-4 bg-main! hover:bg-secondary!">Learn More</Button>
                 </div>
               </div>
             );
